@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Vechicle_mngmt.Models.Vehicletbl>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Displayname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuelType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleMass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngineCapacity_cc_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxPower)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OnRoadPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Displayname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FuelType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleMass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngineCapacity_cc_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxPower)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OnRoadPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

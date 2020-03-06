@@ -1,0 +1,112 @@
+﻿@model Vechicle_mngmt.Models.Vehicletbl
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vehicletbl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Displayname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Displayname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleMass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleMass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineCapacity_cc_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineCapacity_cc_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxSpeed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxSpeed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxPower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxPower)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnRoadPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnRoadPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
